@@ -11,8 +11,13 @@ import UIKit
 class MenuViewController: UIViewController {
 
     /* 定数 */
+    //実装開始年
+    let IMPLIMENTAL_YEAR: String = "2016"
+    //年のフォーマット
+    let YEAR_STRING_FORMAT: String = "yyyy"
     //画面遷移のアニメーション効果
     let UIMODALTRANSITIONSTYLE_PARTIALCURL: UIModalTransitionStyle = UIModalTransitionStyle.PartialCurl
+    let UIMODALTRANSITIONSTYLE_FLIPHORIZONTAL:UIModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
     //tag
     let TAG_CONFIG_IMAGE_BUTTON: Int = 0
     let TAG_WANT_BUTTON: Int = 1
@@ -20,6 +25,10 @@ class MenuViewController: UIViewController {
     let TAG_GIVE_BUTTON: Int = 3
     let TAG_SEARCH_BUTTON: Int = 5
     let TAG_COPYLIGHT_LABEL: Int = 4
+    //コピーライト文言
+    let COPYLIGHT_C: String = "Copyright (C)"
+    let AUTOR_NAME: String = "Atsushi KAWAMORITA"
+    let ALLRIGHTRESERVED: String = "All Rights Reserved."
     
     /* 変数 */
     @IBOutlet weak var ConfigImageButton: UIButton!
@@ -56,7 +65,7 @@ class MenuViewController: UIViewController {
         CopyLigjtLabel.layer.position = CGPoint(x: xPosition, y: yPosition)
  
         /* コピーライト文言 */
-        CopyLigjtLabel.text = "Copyright (C) \(currentYear()) Atsushi KAWAMORITA All Rights Reserved."
+        CopyLigjtLabel.text = "\(COPYLIGHT_C) \(currentYear()) \(AUTOR_NAME) \(ALLRIGHTRESERVED)"
  
     }
 
@@ -105,7 +114,7 @@ class MenuViewController: UIViewController {
         navigationController.modalTransitionStyle = modalTransitionStyle
         
         //画面遷移
-       presentViewController(navigationController, animated: true, completion: nil)
+        presentViewController(navigationController, animated: true, completion: nil)
     }
     
     //コピーライトの年の文字列生成
@@ -114,7 +123,7 @@ class MenuViewController: UIViewController {
         let nowDate = NSDate()
         
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy"
+        formatter.dateFormat = YEAR_STRING_FORMAT
         
         //現在日時の年を取得する
         let nowYear: String = formatter.stringFromDate(nowDate)
@@ -123,12 +132,12 @@ class MenuViewController: UIViewController {
         var returnValue: String = ""
         
         //年の判定
-        if (nowYear == "2016"){
+        if (nowYear == IMPLIMENTAL_YEAR){
             //実装開始年が２０１６年なのでコピーライトの文字列は「２０１６」
-            returnValue = "2016"
+            returnValue = IMPLIMENTAL_YEAR
         }else{
             //2017年からは２０１６年から継続している文言とする
-            returnValue = "2016-\(nowYear)"
+            returnValue = "\(IMPLIMENTAL_YEAR)-\(nowYear)"
         }
         //戻り値を返す
         return returnValue
