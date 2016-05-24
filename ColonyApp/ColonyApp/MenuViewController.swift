@@ -118,7 +118,7 @@ class MenuViewController: UIViewController {
     }
     
     //コピーライトの年の文字列生成
-    func currentYear() -> String{
+    func currentYear() -> String?{
         
         let nowDate = NSDate()
         
@@ -129,7 +129,7 @@ class MenuViewController: UIViewController {
         let nowYear: String = formatter.stringFromDate(nowDate)
         
         //関数の戻り値
-        var returnValue: String = ""
+        var returnValue: String? = nil
         
         //年の判定
         if (nowYear == IMPLIMENTAL_YEAR){
