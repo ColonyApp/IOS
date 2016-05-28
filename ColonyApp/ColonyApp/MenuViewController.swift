@@ -66,7 +66,10 @@ class MenuViewController: UIViewController {
  
         /* コピーライト文言 */
         CopyLigjtLabel.text = "\(COPYLIGHT_C) \(currentYear()) \(AUTOR_NAME) \(ALLRIGHTRESERVED)"
- 
+        
+        let c = CallWebService()
+        var result = c.CallHelloWorld()
+        print("result2:\(result)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -129,13 +132,10 @@ class MenuViewController: UIViewController {
         let nowYear: String = formatter.stringFromDate(nowDate)
         
         //関数の戻り値
-        var returnValue: String? = nil
+        var returnValue: String = String(IMPLIMENTAL_YEAR)
         
         //年の判定
-        if (nowYear == IMPLIMENTAL_YEAR){
-            //実装開始年が２０１６年なのでコピーライトの文字列は「２０１６」
-            returnValue = IMPLIMENTAL_YEAR
-        }else{
+        if (nowYear != IMPLIMENTAL_YEAR){
             //2017年からは２０１６年から継続している文言とする
             returnValue = "\(IMPLIMENTAL_YEAR)-\(nowYear)"
         }
