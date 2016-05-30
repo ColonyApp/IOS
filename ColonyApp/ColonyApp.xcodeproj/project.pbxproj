@@ -36,10 +36,10 @@
 		0DA15FFE1CF9BACF00F08F81 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA15FF61CF9BACF00F08F81 /* Group.swift */; };
 		0DA15FFF1CF9BACF00F08F81 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA15FF71CF9BACF00F08F81 /* User+CoreDataProperties.swift */; };
 		0DA160001CF9BACF00F08F81 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA15FF81CF9BACF00F08F81 /* User.swift */; };
-		0DA160031CF9BACF00F08F81 /* ColonyEntryData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA15FFB1CF9BACF00F08F81 /* ColonyEntryData+CoreDataProperties.swift */; };
 		0DA160041CF9BACF00F08F81 /* ColonyEntryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA15FFC1CF9BACF00F08F81 /* ColonyEntryData.swift */; };
 		0DA160071CF9BCE500F08F81 /* GovernorMode+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA160051CF9BCE500F08F81 /* GovernorMode+CoreDataProperties.swift */; };
 		0DA160081CF9BCE500F08F81 /* GovernorMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA160061CF9BCE500F08F81 /* GovernorMode.swift */; };
+		0DA1600A1CFAD88E00F08F81 /* ColonyEntryData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA160091CFAD88E00F08F81 /* ColonyEntryData+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,10 +96,10 @@
 		0DA15FF61CF9BACF00F08F81 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		0DA15FF71CF9BACF00F08F81 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0DA15FF81CF9BACF00F08F81 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		0DA15FFB1CF9BACF00F08F81 /* ColonyEntryData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColonyEntryData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0DA15FFC1CF9BACF00F08F81 /* ColonyEntryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColonyEntryData.swift; sourceTree = "<group>"; };
 		0DA160051CF9BCE500F08F81 /* GovernorMode+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GovernorMode+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0DA160061CF9BCE500F08F81 /* GovernorMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GovernorMode.swift; sourceTree = "<group>"; };
+		0DA160091CFAD88E00F08F81 /* ColonyEntryData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColonyEntryData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		178F013579C7AA8E329E538D /* Pods-ColonyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColonyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColonyApp/Pods-ColonyApp.release.xcconfig"; sourceTree = "<group>"; };
 		DFCC7338ACCC4053C0BBD0B2 /* Pods_ColonyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColonyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,13 +165,13 @@
 		0D9826781CE8901B00E33D39 /* ColonyApp */ = {
 			isa = PBXGroup;
 			children = (
+				0DA160091CFAD88E00F08F81 /* ColonyEntryData+CoreDataProperties.swift */,
 				0DA160051CF9BCE500F08F81 /* GovernorMode+CoreDataProperties.swift */,
 				0DA160061CF9BCE500F08F81 /* GovernorMode.swift */,
 				0DA15FF51CF9BACF00F08F81 /* Group+CoreDataProperties.swift */,
 				0DA15FF61CF9BACF00F08F81 /* Group.swift */,
 				0DA15FF71CF9BACF00F08F81 /* User+CoreDataProperties.swift */,
 				0DA15FF81CF9BACF00F08F81 /* User.swift */,
-				0DA15FFB1CF9BACF00F08F81 /* ColonyEntryData+CoreDataProperties.swift */,
 				0DA15FFC1CF9BACF00F08F81 /* ColonyEntryData.swift */,
 				0D5BA6BB1CF1B3B9002AAF11 /* config.gif */,
 				0D9826791CE8901B00E33D39 /* AppDelegate.swift */,
@@ -438,11 +438,11 @@
 				0DA15FFD1CF9BACF00F08F81 /* Group+CoreDataProperties.swift in Sources */,
 				0DA160041CF9BACF00F08F81 /* ColonyEntryData.swift in Sources */,
 				0D5BA6B11CF199A3002AAF11 /* SearchTopViewController.swift in Sources */,
-				0DA160031CF9BACF00F08F81 /* ColonyEntryData+CoreDataProperties.swift in Sources */,
 				0D9826821CE8901B00E33D39 /* ColonyApp.xcdatamodeld in Sources */,
 				0D98267A1CE8901B00E33D39 /* AppDelegate.swift in Sources */,
 				0D9826AC1CE891EC00E33D39 /* MenuViewController.swift in Sources */,
 				0DA15FFE1CF9BACF00F08F81 /* Group.swift in Sources */,
+				0DA1600A1CFAD88E00F08F81 /* ColonyEntryData+CoreDataProperties.swift in Sources */,
 				0DA15FE41CF9B28000F08F81 /* ColonyCoreData.xcdatamodeld in Sources */,
 				0DA160071CF9BCE500F08F81 /* GovernorMode+CoreDataProperties.swift in Sources */,
 				0DA160001CF9BACF00F08F81 /* User.swift in Sources */,

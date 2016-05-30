@@ -2,7 +2,7 @@
 //  ColonyEntryData+CoreDataProperties.swift
 //  ColonyApp
 //
-//  Created by 川守田敦史 1 on 2016/05/28.
+//  Created by 川守田敦史 1 on 2016/05/29.
 //  Copyright © 2016年 Atsushi Kawamorita. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -22,6 +22,7 @@ extension ColonyEntryData {
     @NSManaged var how_data: String?
     @NSManaged var howmuch_data: NSDecimalNumber?
     @NSManaged var howmany_data: Int64
-    @NSManaged var userID: String?
+    @NSManaged var userID: NSData?
+    @NSManaged var createDate: NSTimeInterval
 
 }

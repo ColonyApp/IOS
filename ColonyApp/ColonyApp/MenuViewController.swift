@@ -70,6 +70,7 @@ class MenuViewController: UIViewController {
         let c = CallWebService()
         var result = c.CallHelloWorld()
         print("result2:\(result)")
+        
     }
 
     override func didReceiveMemoryWarning() {
