@@ -16,8 +16,8 @@ class MenuViewController: UIViewController {
     //年のフォーマット
     let YEAR_STRING_FORMAT: String = "yyyy"
     //画面遷移のアニメーション効果
-    let UIMODALTRANSITIONSTYLE_PARTIALCURL: UIModalTransitionStyle = UIModalTransitionStyle.PartialCurl
-    let UIMODALTRANSITIONSTYLE_FLIPHORIZONTAL:UIModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+    //let UIMODALTRANSITIONSTYLE: UIModalTransitionStyle =  UIModalTransitionStyle.PartialCurl
+    let UIMODALTRANSITIONSTYLE: UIModalTransitionStyle =  UIModalTransitionStyle.FlipHorizontal
     //tag
     let TAG_CONFIG_IMAGE_BUTTON: Int = 0
     let TAG_WANT_BUTTON: Int = 1
@@ -70,7 +70,8 @@ class MenuViewController: UIViewController {
         let c = CallWebService()
         var result = c.CallHelloWorld()
         print("result2:\(result)")
-        
+        result = c.CallHelloWorld3()
+        print("result4:\(result)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,35 +82,35 @@ class MenuViewController: UIViewController {
     /* 設定イメージボタンクリック */
     @IBAction func ConfigImageButtonTouchDown(sender: AnyObject) {
         //ConfigTopViewController 画面に遷移(ページをめくるような遷移)
-        segueButtonTouchDown(ConfigTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE_PARTIALCURL)
+        segueButtonTouchDown(ConfigTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE)
     }
     
     /* Wantボタンクリック */
     @IBAction func WantButtonTouchDown(sender: AnyObject) {
         //WantTopViewController 画面に遷移(ページをめくるような遷移)
-        segueButtonTouchDown(WantTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE_PARTIALCURL)
+        segueButtonTouchDown(WantTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE)
     }
     
     /* Getボタンクリック */
     @IBAction func GetButtonTouchDown(sender: AnyObject) {
         //GetTopViewController 画面に遷移（ページをめくるような遷移）
-        segueButtonTouchDown(GetTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE_PARTIALCURL)
+        segueButtonTouchDown(GetTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE)
     }
     
     /* Giveボタンクリック */
     @IBAction func GiveButtonTouchDown(sender: AnyObject) {
         //GiveTopViewController 画面に遷移（ページをめくるような遷移）
-        segueButtonTouchDown(GiveTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE_PARTIALCURL)
+        segueButtonTouchDown(GiveTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE)
     }
 
     /* Searchボタンクリック */
     @IBAction func SearchButtonTouchDown(sender: AnyObject) {
         //SearchTopViewController 画面に遷移（ページをめくるような遷移）
-        segueButtonTouchDown(SearchTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE_PARTIALCURL)
+        segueButtonTouchDown(SearchTopViewController(), modalTransitionStyle: UIMODALTRANSITIONSTYLE)
     }
     
     //ボタンクリック時の画面遷移
-    func segueButtonTouchDown(targetViewController: UIViewController, modalTransitionStyle: UIModalTransitionStyle){
+    func segueButtonTouchDown(targetViewController: UIViewController, modalTransitionStyle:  UIModalTransitionStyle){
 
         //ボタンクリック時に遷移する先の画面のインスタンスをルートビューコントローラに設定
         let navigationController = UINavigationController(rootViewController: targetViewController)
