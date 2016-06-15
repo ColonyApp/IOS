@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class MainViewController: UIViewController {
+class ConfigViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
                     } else {
                         returnValue = false
                     }
-                case .Failure(let _):
+                case .Failure( _):
                     print("error")
                     returnValue = false
                 }
