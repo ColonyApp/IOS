@@ -48,7 +48,7 @@ class WebServicesAccessor{
         let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/CreateUser"
         let parameter = [
             "nickname":nickname,
-            "mailAddress":mailAddress
+            "mailAddress":mailAddress,
             "groupName01":groupName
         ]
         var returnValue : Bool = false
