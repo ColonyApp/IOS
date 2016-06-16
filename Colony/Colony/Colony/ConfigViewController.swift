@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 class ConfigViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if IsExistsUserGroupChainByName("", groupName: "") == true{
+        let wsa = WebServicesAccessor()
+        if wsa.IsExistsUserGroupChainByName("", groupName: "") == true{
             print("true")
         }else{
             print("false")
@@ -28,30 +27,6 @@ class ConfigViewController: UIViewController {
     }
     
 
-    func IsExistsUserGroupChainByName(nickname: String, groupName: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsUserGroupChainByName"
-        let parameter = [
-            "nickname":nickname,
-            "groupName01":groupName
-        ]
-        var returnValue : Bool = false
-        Alamofire.request(.POST, url, parameters: parameter)
-            .responseJSON{response in
-                switch response.result {
-                case .Success(let value):
-                    let json = JSON(value)
-                    if json == "true" {
-                        returnValue = true
-                    } else {
-                        returnValue = false
-                    }
-                case .Failure( _):
-                    print("error")
-                    returnValue = false
-                }
-        }
-        return returnValue
-    }
     
     /*
     // MARK: - Navigation
