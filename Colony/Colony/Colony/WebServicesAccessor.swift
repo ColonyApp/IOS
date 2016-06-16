@@ -70,7 +70,118 @@ class WebServicesAccessor{
         return returnValue
     }
 
-    
+    func CreateUserId() -> String {
+        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/CreateUserId"
+        var returnValue : String = ""
+        Alamofire.request(.GET, url)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    returnValue = json.string!
+                case .Failure( _):
+                    returnValue = ""
+                }
+        }
+        return returnValue
+    }
+
+    func GetGroupIdByGroupName(groupName: String)->Bool{
+        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/GetGroupIdByGroupName"
+        let parameter = [
+            "groupName":groupName
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+
+    func GetUserIdByMailAddress(mailAddress: String)->Bool{
+        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/GetUserIdByMailAddress"
+        let parameter = [
+            "mailAddress":mailAddress
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+
+    func IsExistsGroup(groupName: String)->Bool{
+        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsGroup"
+        let parameter = [
+            "groupName":groupName
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+
+    func IsExistsUser(nickname: String, mailAddress: String)->Bool{
+        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsUser"
+        let parameter = [
+            "nickname":nickname,
+            "mailAddress":mailAddress
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
     func IsExistsUserGroupChainByName(nickname: String, groupName: String)->Bool{
         let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsUserGroupChainByName"
         let parameter = [
