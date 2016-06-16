@@ -182,6 +182,7 @@ class WebServicesAccessor{
         }
         return returnValue
     }
+    
     func IsExistsUserGroupChainByName(nickname: String, groupName: String)->Bool{
         let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsUserGroupChainByName"
         let parameter = [
@@ -206,5 +207,58 @@ class WebServicesAccessor{
         }
         return returnValue
     }
+
+    func ModifyMailAddress(userId: String, oldMailAddress: String, newMailAddress: String)->Bool{
+        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/ModifyMailAddress"
+        let parameter = [
+            "userId":userId,
+            "oldMailAddress":oldMailAddress,
+            "newMailAddress":newMailAddress
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+
+    func ModifyNickName(userId: String, oldNickName: String, newNickName: String)->Bool{
+        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/ModifyNickName"
+        let parameter = [
+            "userId":userId,
+            "oldNickname":oldNickName,
+            "newNickname":newNickName
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+
 }
 

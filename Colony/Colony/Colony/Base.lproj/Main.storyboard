@@ -8,7 +8,7 @@
         <!--Give!-->
         <scene sceneID="VLo-eA-Fly">
             <objects>
-                <viewController id="OpD-gp-s5R" sceneMemberID="viewController">
+                <viewController id="OpD-gp-s5R" customClass="GiveSearchConditionViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7QU-c5-Jmj"/>
                         <viewControllerLayoutGuide type="bottom" id="FOo-y8-vAF"/>
@@ -23,7 +23,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mv-c3-Xwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="-976"/>
+            <point key="canvasLocation" x="2270" y="-1026"/>
+        </scene>
+        <!--Give Result View Controller-->
+        <scene sceneID="AIg-vu-9Yi">
+            <objects>
+                <viewController id="xRp-UM-VtH" customClass="GiveResultViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LRB-0a-eGM"/>
+                        <viewControllerLayoutGuide type="bottom" id="jFs-dl-dcr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L66-Uj-A4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20I-iA-Ly2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2878" y="-1027"/>
         </scene>
         <!--Config-->
         <scene sceneID="HRL-8R-Rg8">
@@ -57,8 +75,8 @@
                         <segue destination="tO6-rH-s5j" kind="relationship" relationship="viewControllers" id="ha9-0I-vy6"/>
                         <segue destination="0q3-iF-CIb" kind="relationship" relationship="viewControllers" id="RrP-l9-4eq"/>
                         <segue destination="FCQ-JF-i2t" kind="relationship" relationship="viewControllers" id="iyI-hO-qD0"/>
-                        <segue destination="OpD-gp-s5R" kind="relationship" relationship="viewControllers" id="ghj-be-ElR"/>
                         <segue destination="ox8-x0-6Vk" kind="relationship" relationship="viewControllers" id="2Dn-uA-Fwb"/>
+                        <segue destination="OpD-gp-s5R" kind="relationship" relationship="viewControllers" id="txN-QE-IRT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxm-3s-EwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,7 +86,7 @@
         <!--Search!-->
         <scene sceneID="Lc7-pY-Fdg">
             <objects>
-                <viewController id="FCQ-JF-i2t" sceneMemberID="viewController">
+                <viewController id="FCQ-JF-i2t" customClass="SearchConditionViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tnR-Od-tC1"/>
                         <viewControllerLayoutGuide type="bottom" id="7rU-6b-nHd"/>
@@ -88,7 +106,7 @@
         <!--Want!-->
         <scene sceneID="wdj-WM-q7I">
             <objects>
-                <viewController id="tO6-rH-s5j" sceneMemberID="viewController">
+                <viewController id="tO6-rH-s5j" customClass="WantSearchConditionViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jdl-EC-rHt"/>
                         <viewControllerLayoutGuide type="bottom" id="tVh-m4-JAj"/>
@@ -108,7 +126,7 @@
         <!--Get!-->
         <scene sceneID="BSw-3A-zBf">
             <objects>
-                <viewController id="0q3-iF-CIb" sceneMemberID="viewController">
+                <viewController id="0q3-iF-CIb" customClass="GetSearchConditionViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N1e-jB-8T8"/>
                         <viewControllerLayoutGuide type="bottom" id="tnN-xi-NbE"/>
@@ -124,6 +142,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yK9-31-BdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2076" y="471"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="zkA-bX-ghQ">
+            <objects>
+                <viewController id="asZ-WC-hSx" customClass="SearchResultViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I7b-9X-LPe"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Va-9P-mST"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dkp-YL-zsQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39M-Ff-bdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="1134"/>
+        </scene>
+        <!--Want Result View Controller-->
+        <scene sceneID="MbN-Zv-rXz">
+            <objects>
+                <viewController id="JgV-Hc-ZRn" customClass="WantResultViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ghA-to-2yf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mye-oI-Nsf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="izj-WZ-7g5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RY0-QZ-S3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="1134"/>
+        </scene>
+        <!--Get Result View Controller-->
+        <scene sceneID="8Bz-uA-Kxd">
+            <objects>
+                <viewController id="RcN-2X-wOE" customClass="GetResultViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z6w-eM-H2f"/>
+                        <viewControllerLayoutGuide type="bottom" id="VNU-Lr-qaA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kZC-bM-udT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVH-eX-TL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="1134"/>
         </scene>
     </scenes>
 </document>
