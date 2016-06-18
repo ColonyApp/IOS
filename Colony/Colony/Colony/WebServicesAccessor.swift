@@ -12,8 +12,26 @@ import SwiftyJSON
 
 class WebServicesAccessor{
     
+    //定数
+    let BASE_URL: String = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/"
+    let MODIFY_NICKNAME: String = "ModifyNickName"
+    let MODIFY_MAILADDRESS: String = "ModifyMailAddress"
+    let IS_EXISTS_USER_GROUP_CHAIN_BY_NAME: String = "IsExistsUserGroupChainByName"
+    let IS_EXISTS_USER: String = "IsExistsUser"
+    let IS_EXISTS_GROUP: String = "IsExistsGroup"
+    let GET_USER_BY_MAILADDRESS: String = "GetUserIdByMailAddress"
+    let GET_GROUPID_BY_GROUPNAME: String = "GetGroupIdByGroupName"
+    let CREATE_USER_ID: String = "CreateUserId"
+    let CREARE_USER: String = "CreateUser"
+    let CREATE_TARGET_ID: String = "CreateTargetId"
+    let CREATE_GROUP_ID: String = "CreateGroupId"
+    
+    init(){
+        
+    }
+    
     func CreateGroupId() -> String {
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/CreateGroupId"
+        let url = BASE_URL + CREATE_GROUP_ID
         var returnValue : String = ""
         Alamofire.request(.GET, url)
             .responseJSON{response in
@@ -27,9 +45,9 @@ class WebServicesAccessor{
         }
         return returnValue
     }
-
+    
     func CreateTargetId() -> String {
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/CreateTargetId"
+        let url = BASE_URL + CREATE_TARGET_ID
         var returnValue : String = ""
         Alamofire.request(.GET, url)
             .responseJSON{response in
@@ -43,9 +61,9 @@ class WebServicesAccessor{
         }
         return returnValue
     }
-
+    
     func CreateUser(nickname: String, mailAddress: String, groupName: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/CreateUser"
+        let url = BASE_URL + CREARE_USER
         let parameter = [
             "nickname":nickname,
             "mailAddress":mailAddress,
@@ -71,7 +89,7 @@ class WebServicesAccessor{
     }
 
     func CreateUserId() -> String {
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/CreateUserId"
+        let url = BASE_URL + CREATE_USER_ID
         var returnValue : String = ""
         Alamofire.request(.GET, url)
             .responseJSON{response in
@@ -87,7 +105,7 @@ class WebServicesAccessor{
     }
 
     func GetGroupIdByGroupName(groupName: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/GetGroupIdByGroupName"
+        let url = BASE_URL + GET_GROUPID_BY_GROUPNAME
         let parameter = [
             "groupName":groupName
         ]
@@ -111,7 +129,7 @@ class WebServicesAccessor{
     }
 
     func GetUserIdByMailAddress(mailAddress: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/GetUserIdByMailAddress"
+        let url = BASE_URL + GET_USER_BY_MAILADDRESS
         let parameter = [
             "mailAddress":mailAddress
         ]
@@ -133,9 +151,9 @@ class WebServicesAccessor{
         }
         return returnValue
     }
-
+    
     func IsExistsGroup(groupName: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsGroup"
+        let url = BASE_URL + IS_EXISTS_GROUP
         let parameter = [
             "groupName":groupName
         ]
@@ -159,7 +177,7 @@ class WebServicesAccessor{
     }
 
     func IsExistsUser(nickname: String, mailAddress: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsUser"
+        let url = BASE_URL + IS_EXISTS_USER
         let parameter = [
             "nickname":nickname,
             "mailAddress":mailAddress
@@ -184,7 +202,7 @@ class WebServicesAccessor{
     }
     
     func IsExistsUserGroupChainByName(nickname: String, groupName: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/IsExistsUserGroupChainByName"
+        let url = BASE_URL + IS_EXISTS_USER_GROUP_CHAIN_BY_NAME
         let parameter = [
             "nickname":nickname,
             "groupName01":groupName
@@ -207,9 +225,9 @@ class WebServicesAccessor{
         }
         return returnValue
     }
-
+    
     func ModifyMailAddress(userId: String, oldMailAddress: String, newMailAddress: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/ModifyMailAddress"
+        let url = BASE_URL + MODIFY_MAILADDRESS
         let parameter = [
             "userId":userId,
             "oldMailAddress":oldMailAddress,
@@ -235,7 +253,7 @@ class WebServicesAccessor{
     }
 
     func ModifyNickName(userId: String, oldNickName: String, newNickName: String)->Bool{
-        let url = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/ModifyNickName"
+        let url = BASE_URL + MODIFY_NICKNAME
         let parameter = [
             "userId":userId,
             "oldNickname":oldNickName,

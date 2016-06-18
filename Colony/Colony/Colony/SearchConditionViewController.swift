@@ -21,6 +21,9 @@ class SearchConditionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func  aaa(aaa:String) -> Bool {
+        return false
+    }
 
     /*
     // MARK: - Navigation
