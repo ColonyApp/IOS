@@ -12,15 +12,6 @@
 		0D4FDA021D10BC660050D659 /* Colony.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D4FDA001D10BC660050D659 /* Colony.xcdatamodeld */; };
 		0D4FDA041D10BC660050D659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4FDA031D10BC660050D659 /* Assets.xcassets */; };
 		0D4FDA071D10BC660050D659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4FDA051D10BC660050D659 /* LaunchScreen.storyboard */; };
-		0D4FDA131D10BD950050D659 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4FDA121D10BD950050D659 /* ConfigViewController.swift */; };
-		0D6A45FA1D124B4C00285C04 /* GiveSearchConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A45F81D124B4C00285C04 /* GiveSearchConditionViewController.swift */; };
-		0D6A45FE1D124BF700285C04 /* GiveResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A45FC1D124BF700285C04 /* GiveResultViewController.swift */; };
-		0D6A46011D124C6100285C04 /* GetSearchConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A46001D124C6100285C04 /* GetSearchConditionViewController.swift */; };
-		0D6A46031D124CA000285C04 /* GetResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A46021D124CA000285C04 /* GetResultViewController.swift */; };
-		0D6A46051D124CE900285C04 /* WantSearchConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A46041D124CE900285C04 /* WantSearchConditionViewController.swift */; };
-		0D6A46071D124D1100285C04 /* WantResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A46061D124D1100285C04 /* WantResultViewController.swift */; };
-		0D6A46091D124D4900285C04 /* SearchConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A46081D124D4900285C04 /* SearchConditionViewController.swift */; };
-		0D6A460B1D124D6000285C04 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6A460A1D124D6000285C04 /* SearchResultViewController.swift */; };
 		0DD9D0B71D11FCC90051B28E /* WebServicesAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD9D0B61D11FCC90051B28E /* WebServicesAccessor.swift */; };
 		0DF3C1611D10DA2700D29EEE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF3C15F1D10DA2700D29EEE /* Alamofire.framework */; };
 		0DF3C1621D10DA2700D29EEE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DF3C1601D10DA2700D29EEE /* SwiftyJSON.framework */; };
@@ -34,15 +25,6 @@
 		0D4FDA031D10BC660050D659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D4FDA061D10BC660050D659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D4FDA081D10BC670050D659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D4FDA121D10BD950050D659 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
-		0D6A45F81D124B4C00285C04 /* GiveSearchConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiveSearchConditionViewController.swift; sourceTree = "<group>"; };
-		0D6A45FC1D124BF700285C04 /* GiveResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiveResultViewController.swift; sourceTree = "<group>"; };
-		0D6A46001D124C6100285C04 /* GetSearchConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSearchConditionViewController.swift; sourceTree = "<group>"; };
-		0D6A46021D124CA000285C04 /* GetResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetResultViewController.swift; sourceTree = "<group>"; };
-		0D6A46041D124CE900285C04 /* WantSearchConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WantSearchConditionViewController.swift; sourceTree = "<group>"; };
-		0D6A46061D124D1100285C04 /* WantResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WantResultViewController.swift; sourceTree = "<group>"; };
-		0D6A46081D124D4900285C04 /* SearchConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchConditionViewController.swift; sourceTree = "<group>"; };
-		0D6A460A1D124D6000285C04 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		0DD9D0B61D11FCC90051B28E /* WebServicesAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesAccessor.swift; sourceTree = "<group>"; };
 		0DF3C15F1D10DA2700D29EEE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0DF3C1601D10DA2700D29EEE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -88,16 +70,7 @@
 				0D4FDA051D10BC660050D659 /* LaunchScreen.storyboard */,
 				0D4FDA081D10BC670050D659 /* Info.plist */,
 				0D4FDA001D10BC660050D659 /* Colony.xcdatamodeld */,
-				0D4FDA121D10BD950050D659 /* ConfigViewController.swift */,
 				0DD9D0B61D11FCC90051B28E /* WebServicesAccessor.swift */,
-				0D6A45F81D124B4C00285C04 /* GiveSearchConditionViewController.swift */,
-				0D6A45FC1D124BF700285C04 /* GiveResultViewController.swift */,
-				0D6A46001D124C6100285C04 /* GetSearchConditionViewController.swift */,
-				0D6A46021D124CA000285C04 /* GetResultViewController.swift */,
-				0D6A46041D124CE900285C04 /* WantSearchConditionViewController.swift */,
-				0D6A46061D124D1100285C04 /* WantResultViewController.swift */,
-				0D6A46081D124D4900285C04 /* SearchConditionViewController.swift */,
-				0D6A460A1D124D6000285C04 /* SearchResultViewController.swift */,
 			);
 			path = Colony;
 			sourceTree = "<group>";
@@ -193,18 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D4FDA131D10BD950050D659 /* ConfigViewController.swift in Sources */,
-				0D6A46071D124D1100285C04 /* WantResultViewController.swift in Sources */,
-				0D6A46051D124CE900285C04 /* WantSearchConditionViewController.swift in Sources */,
 				0D4FDA021D10BC660050D659 /* Colony.xcdatamodeld in Sources */,
-				0D6A46011D124C6100285C04 /* GetSearchConditionViewController.swift in Sources */,
 				0DD9D0B71D11FCC90051B28E /* WebServicesAccessor.swift in Sources */,
 				0D4FD9FA1D10BC660050D659 /* AppDelegate.swift in Sources */,
-				0D6A45FE1D124BF700285C04 /* GiveResultViewController.swift in Sources */,
-				0D6A46031D124CA000285C04 /* GetResultViewController.swift in Sources */,
-				0D6A45FA1D124B4C00285C04 /* GiveSearchConditionViewController.swift in Sources */,
-				0D6A460B1D124D6000285C04 /* SearchResultViewController.swift in Sources */,
-				0D6A46091D124D4900285C04 /* SearchConditionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

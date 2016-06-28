@@ -12,8 +12,8 @@ import SwiftyJSON
 
 class WebServicesAccessor{
     
-    //定数
-    let BASE_URL: String = "http://colonywebappdb.azurewebsites.net/WebService1.asmx/"
+    //Constant
+    let BASE_URL: String = "http://colonywebservices.azurewebsites.net/WebService1.asmx/"
     let MODIFY_NICKNAME: String = "ModifyNickName"
     let MODIFY_MAILADDRESS: String = "ModifyMailAddress"
     let IS_EXISTS_USER_GROUP_CHAIN_BY_NAME: String = "IsExistsUserGroupChainByName"
