@@ -8,7 +8,7 @@
         <!--Search Condition-->
         <scene sceneID="Baa-if-cX4">
             <objects>
-                <viewController title="Search Condition" id="Os6-V9-Qha" sceneMemberID="viewController">
+                <viewController title="Search Condition" id="Os6-V9-Qha" customClass="SeachConditionViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kPs-FG-iiD"/>
                         <viewControllerLayoutGuide type="bottom" id="2PX-pq-vTc"/>
@@ -48,7 +48,7 @@
         <!--Search Result & Action-->
         <scene sceneID="T5z-HD-Osy">
             <objects>
-                <viewController title="Search Result &amp; Action" id="FFK-QK-zFp" sceneMemberID="viewController">
+                <viewController title="Search Result &amp; Action" id="FFK-QK-zFp" customClass="SearchResultActionViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yJC-wR-zPl"/>
                         <viewControllerLayoutGuide type="bottom" id="zdw-uv-bnJ"/>
@@ -90,10 +90,27 @@
             </objects>
             <point key="canvasLocation" x="3490.5" y="1551"/>
         </scene>
+        <!--Detail-->
+        <scene sceneID="i68-iy-apX">
+            <objects>
+                <viewController title="Detail" id="oIw-er-uyq" customClass="DetailViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zPW-rB-i5K"/>
+                        <viewControllerLayoutGuide type="bottom" id="pX6-mc-2E6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VDb-aF-0JL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teN-ac-3PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3495" y="2234"/>
+        </scene>
         <!--Config-General-->
         <scene sceneID="oug-6x-Mlg">
             <objects>
-                <viewController title="Config-General" id="cTo-gL-L6V" sceneMemberID="viewController">
+                <viewController title="Config-General" id="cTo-gL-L6V" customClass="ConfigGeneralViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EEf-vz-QMM"/>
                         <viewControllerLayoutGuide type="bottom" id="gKF-ej-iel"/>
@@ -133,7 +150,7 @@
         <!--Config-Group-->
         <scene sceneID="0Lp-Z3-r7z">
             <objects>
-                <viewController title="Config-Group" id="l7x-O8-Rx5" sceneMemberID="viewController">
+                <viewController title="Config-Group" id="l7x-O8-Rx5" customClass="ConfigGroupViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLU-2P-4Ig"/>
                         <viewControllerLayoutGuide type="bottom" id="sH9-1k-zLe"/>
@@ -178,7 +195,7 @@
         <!--Want-->
         <scene sceneID="v9A-8p-3LL">
             <objects>
-                <viewController title="Want" id="CH5-dt-bo0" sceneMemberID="viewController">
+                <viewController title="Want" id="CH5-dt-bo0" customClass="WantViewController" customModule="Colony" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FxA-yn-aci"/>
                         <viewControllerLayoutGuide type="bottom" id="EKb-Wn-rDu"/>
