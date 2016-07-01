@@ -25,6 +25,12 @@ class WebServicesAccessor{
     let CREARE_USER: String = "CreateUser"
     let CREATE_TARGET_ID: String = "CreateTargetId"
     let CREATE_GROUP_ID: String = "CreateGroupId"
+    let CREATE_DATA_GET: String = "CreateDataGet"
+    let CREATE_DATA_GIVE: String = "CreateDataGive"
+    let CREATE_DATA_WANT: String = "CreateDataWant"
+    let MODIFY_DATA_GET: String = "ModifyDataGet"
+    let MODIFY_DATA_GIVE: String = "ModifyDataGive"
+    let MODIFY_DATA_WANT: String = "ModifyDataWant"
     
     init(){
         
@@ -258,6 +264,234 @@ class WebServicesAccessor{
             "userId":userId,
             "oldNickname":oldNickName,
             "newNickname":newNickName
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+    
+    func CreateDataGet(userId: String, tags: String, groupName:String, whatAttribute: String
+                     , whenAttribute: String, whyAttribute: String, whoAttribute: String
+                     , whereAttribute: String, whomAttribute: String, howAttribute: String
+                     ,howMuchAttribute: String, howManyAttribute: String)->Bool{
+        let url = BASE_URL + CREATE_DATA_GET
+        let parameter = [
+            "userId":userId,
+            "tags":tags,
+            "groupName":groupName,
+            "whatAttribute":whatAttribute,
+            "whenAttribute":whenAttribute,
+            "whyAttribute":whyAttribute,
+            "whoAttribute":whoAttribute,
+            "whereAttribute":whereAttribute,
+            "whomAttribute":whomAttribute,
+            "howAttribute":howAttribute,
+            "howMuchAttribute":howMuchAttribute,
+            "howManyAttribute":howManyAttribute
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+    
+    func CreateDataGive(userId: String, tags: String, groupName:String, whatAttribute: String
+        , whenAttribute: String, whyAttribute: String, whoAttribute: String
+        , whereAttribute: String, whomAttribute: String, howAttribute: String
+        ,howMuchAttribute: String, howManyAttribute: String)->Bool{
+        let url = BASE_URL + CREATE_DATA_GIVE
+        let parameter = [
+            "userId":userId,
+            "tags":tags,
+            "groupName":groupName,
+            "whatAttribute":whatAttribute,
+            "whenAttribute":whenAttribute,
+            "whyAttribute":whyAttribute,
+            "whoAttribute":whoAttribute,
+            "whereAttribute":whereAttribute,
+            "whomAttribute":whomAttribute,
+            "howAttribute":howAttribute,
+            "howMuchAttribute":howMuchAttribute,
+            "howManyAttribute":howManyAttribute
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+    
+    func CreateDataWant(userId: String, tags: String, groupName:String, whatAttribute: String
+        , whenAttribute: String, whyAttribute: String, whoAttribute: String
+        , whereAttribute: String, whomAttribute: String, howAttribute: String
+        ,howMuchAttribute: String, howManyAttribute: String)->Bool{
+        let url = BASE_URL + CREATE_DATA_WANT
+        let parameter = [
+            "userId":userId,
+            "tags":tags,
+            "groupName":groupName,
+            "whatAttribute":whatAttribute,
+            "whenAttribute":whenAttribute,
+            "whyAttribute":whyAttribute,
+            "whoAttribute":whoAttribute,
+            "whereAttribute":whereAttribute,
+            "whomAttribute":whomAttribute,
+            "howAttribute":howAttribute,
+            "howMuchAttribute":howMuchAttribute,
+            "howManyAttribute":howManyAttribute
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+
+    func ModifyDataGet(userId: String, tags: String, groupName:String, whatAttribute: String
+        , whenAttribute: String, whyAttribute: String, whoAttribute: String
+        , whereAttribute: String, whomAttribute: String, howAttribute: String
+        ,howMuchAttribute: String, howManyAttribute: String)->Bool{
+        let url = BASE_URL + MODIFY_DATA_GET
+        let parameter = [
+            "userId":userId,
+            "tags":tags,
+            "groupName":groupName,
+            "whatAttribute":whatAttribute,
+            "whenAttribute":whenAttribute,
+            "whyAttribute":whyAttribute,
+            "whoAttribute":whoAttribute,
+            "whereAttribute":whereAttribute,
+            "whomAttribute":whomAttribute,
+            "howAttribute":howAttribute,
+            "howMuchAttribute":howMuchAttribute,
+            "howManyAttribute":howManyAttribute
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+
+    func ModifyDataGive(userId: String, tags: String, groupName:String, whatAttribute: String
+        , whenAttribute: String, whyAttribute: String, whoAttribute: String
+        , whereAttribute: String, whomAttribute: String, howAttribute: String
+        ,howMuchAttribute: String, howManyAttribute: String)->Bool{
+        let url = BASE_URL + MODIFY_DATA_GIVE
+        let parameter = [
+            "userId":userId,
+            "tags":tags,
+            "groupName":groupName,
+            "whatAttribute":whatAttribute,
+            "whenAttribute":whenAttribute,
+            "whyAttribute":whyAttribute,
+            "whoAttribute":whoAttribute,
+            "whereAttribute":whereAttribute,
+            "whomAttribute":whomAttribute,
+            "howAttribute":howAttribute,
+            "howMuchAttribute":howMuchAttribute,
+            "howManyAttribute":howManyAttribute
+        ]
+        var returnValue : Bool = false
+        Alamofire.request(.POST, url, parameters: parameter)
+            .responseJSON{response in
+                switch response.result {
+                case .Success(let value):
+                    let json = JSON(value)
+                    if json == "true" {
+                        returnValue = true
+                    } else {
+                        returnValue = false
+                    }
+                case .Failure( _):
+                    print("error")
+                    returnValue = false
+                }
+        }
+        return returnValue
+    }
+    
+    func ModifyDataWant(userId: String, tags: String, groupName:String, whatAttribute: String
+        , whenAttribute: String, whyAttribute: String, whoAttribute: String
+        , whereAttribute: String, whomAttribute: String, howAttribute: String
+        ,howMuchAttribute: String, howManyAttribute: String)->Bool{
+        let url = BASE_URL + MODIFY_DATA_WANT
+        let parameter = [
+            "userId":userId,
+            "tags":tags,
+            "groupName":groupName,
+            "whatAttribute":whatAttribute,
+            "whenAttribute":whenAttribute,
+            "whyAttribute":whyAttribute,
+            "whoAttribute":whoAttribute,
+            "whereAttribute":whereAttribute,
+            "whomAttribute":whomAttribute,
+            "howAttribute":howAttribute,
+            "howMuchAttribute":howMuchAttribute,
+            "howManyAttribute":howManyAttribute
         ]
         var returnValue : Bool = false
         Alamofire.request(.POST, url, parameters: parameter)
